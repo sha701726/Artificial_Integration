@@ -1,6 +1,3 @@
-Here's a `README.md` file content for the provided Python script:
-
-```markdown
 # Automation Script
 
 This Python script automates a series of actions using the `pyautogui`, `pyperclip`, and `gemini_ai` libraries. It clicks on a specific coordinate, drags and copies data, and interacts with the Gemini AI for processing and pasting responses.
