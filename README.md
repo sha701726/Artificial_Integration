@@ -58,4 +58,3 @@ To test the script, you can adjust the constants for your specific coordinates a
 ## Note
 
 Ensure that the `gemini_ai` library is correctly set up and that you have the necessary permissions for the automated actions performed by `pyautogui`.
-```
