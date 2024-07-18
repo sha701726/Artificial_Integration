@@ -1,6 +1,5 @@
-requests
-python-dotenv
-google-generativeai
-openai==0.28
-numpy
-pandas
+import google.generativeai
+import pyautogui as py
+import pyperclip
+from datetime import datetime
+import time
