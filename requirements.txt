@@ -1,5 +1,5 @@
-import google.generativeai
-import pyautogui as py
-import pyperclip
-from datetime import datetime
-import time
+google.generativeai
+pyautogui
+pyperclip
+datetime
+time
