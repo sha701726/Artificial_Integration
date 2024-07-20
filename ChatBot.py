@@ -1,4 +1,4 @@
-import gemini_ai_api
+import gemini_ai_api gemini_ai
 import pyautogui as py
 import pyperclip
 from datetime import datetime
@@ -8,8 +8,6 @@ import time
 BREVE_CLICK_COORDS = (1318, 1051)
 DRAG_START_COORDS = (594, 210)
 DRAG_END_COORDS = (1862, 893)
-CHECK_HOUR = 3
-CHECK_MINUTE = 30
 
 # Click on the Breve button
 py.click(*BREVE_CLICK_COORDS)
@@ -28,10 +26,10 @@ def run():
     data_val = pyperclip.paste()
     return data_val
 
-def write_in_file(new_data) :
+def Function_call(new_data,name) :
     try :
         messages = new_data.strip().split('\n')
-        if "friend2 BCA" in messages[-1] :
+        if f"{name}" in messages[-1] :
             py.click(995,960)
             response = gemini_ai.get_gemini_response(new_data)
             pyperclip.copy(response)
@@ -44,6 +42,12 @@ def write_in_file(new_data) :
     except Exception as E :
          print(f"Error: {E}")
 
+name = input("Enter The What's app User Name: ")
+red = '\033[91m'  # ANSI escape code for red text
+reset = '\033[0m'  # ANSI escape code to reset color
+message = f"{red}                   WHEN YOU ENTER THE HOUR AND MINUTS PLEASE ENSURE THAT BOTH HOUR AND MINUTS SHOULD NOT BE ZERO{reset}"
+CHECK_HOUR = int("Enter The Hour, Till You Would Like To Run The Script: ")
+CHECK_MINUTE = int("Enter The Minuts, Till You Would Like To Run The Script: ")
 while True :
     now = datetime.now()
     hour, minute = now.hour, now.minute
@@ -54,6 +58,6 @@ while True :
     else:
         honor = run()
         print(f"run Function Call == checked! Time = {hour},{minute}")
-        write_in_file(honor)
-        print(f"write_in_file Function Call == checked! Time = {hour},{minute}")
+        Function_call(honor,name)
+        print(f"Function_call function call == checked! Time = {hour},{minute}")
     # break
