@@ -1,4 +1,4 @@
-import gemini_ai
+import gemini_ai_api
 import pyautogui as py
 import pyperclip
 from datetime import datetime
